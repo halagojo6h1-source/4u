@@ -1,0 +1,164 @@
+body {
+    background: linear-gradient(to bottom, #fff8fb, #ffeef5);
+    font-family: "Trebuchet MS", sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 80px;
+    background: rgba(255,255,255,0.85);
+    padding: 40px;
+    border-radius: 35px;
+    box-shadow: 0 10px 40px rgba(255,182,193,0.25);
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.8s ease;
+}
+
+.active {
+    display: block;
+}
+
+h1 {
+    color: #ff7faa;
+    font-size: 42px;
+}
+
+h2 {
+    color: #ff7faa;
+    font-size: 32px;
+}
+
+h1, h2 {
+    text-shadow: 0 2px 10px rgba(255,182,193,0.4);
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+button {
+    background: #ffc9dd;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(255,192,203,0.4);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #ffb6d0;
+    box-shadow: 0 8px 20px rgba(255,182,193,0.5);
+}
+
+/* 💌 PAGE 7 LETTER SCROLL */
+.letter {
+    background: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(255,182,193,0.35);
+
+    text-align: right;
+    direction: rtl;
+    font-size: 18px;
+    line-height: 2.4;
+
+    height: 60vh;
+    overflow-y: auto;
+}
+
+/* 💖 PAGE 8 LOVE BOX SCROLL */
+.love-box {
+    background: linear-gradient(135deg, #fff0f6, #ffe4ec);
+    padding: 25px;
+    border-radius: 25px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 10px 35px rgba(255,182,193,0.25);
+    animation: popIn 1s ease;
+
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* scroll داخل النص (اختياري إضافي) */
+.scroll-text {
+    text-align: right;
+    line-height: 2;
+    font-size: 16px;
+    color: #555;
+}
+
+/* hearts */
+.hearts span {
+    position: fixed;
+    bottom: -50px;
+    font-size: 20px;
+    animation: float 12s linear infinite;
+    opacity: 0.25;
+}
+
+.hearts span:nth-child(1) { left:10%; animation-delay:0s; }
+.hearts span:nth-child(2) { left:25%; animation-delay:2s; }
+.hearts span:nth-child(3) { left:40%; animation-delay:4s; }
+.hearts span:nth-child(4) { left:55%; animation-delay:6s; }
+.hearts span:nth-child(5) { left:70%; animation-delay:8s; }
+.hearts span:nth-child(6) { left:85%; animation-delay:10s; }
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-120vh); }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sparkles {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    font-size: 20px;
+    opacity: 0.4;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { opacity: 0.2; }
+    to { opacity: 0.6; }
+}
